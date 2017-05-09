@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Fit Food</h1>
+    {% for i in food_list %}
+        {% for k, v in i.items %}
+            <h2>{{k}}</h2>
+            <table>
+                {% for j in v %}
+                    <tr>
+                        {% for key, value in j.items %}
+                            <td>{{key.name}}</td>
+                            <td>{{value.name}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
